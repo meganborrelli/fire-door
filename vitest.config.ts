@@ -5,6 +5,7 @@ import viteConfig from './vite.config'
 export default mergeConfig(
   viteConfig,
   defineConfig({
+    base: "/fire-door/",
     test: {
       environment: 'jsdom',
       exclude: [...configDefaults.exclude, 'e2e/**'],

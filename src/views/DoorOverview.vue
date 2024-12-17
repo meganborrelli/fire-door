@@ -17,6 +17,7 @@ async function getSubmissionOnClick() {
     })
     console.log(previousSubmissions)
 }
+  // @ts-ignore
 function showItem(item) {
     console.log(item)
 }

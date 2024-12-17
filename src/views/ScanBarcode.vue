@@ -66,6 +66,9 @@ function showItem(item: any) {
 </template>
   
   <style>
+.v-btn {
+    margin-top: 170px;
+}
   @media only screen and (max-width: 760px) {
     .qr-scanner {
       margin-top: 130px;

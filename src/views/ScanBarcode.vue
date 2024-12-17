@@ -5,19 +5,27 @@ import {
   // @ts-ignore
 import { QrcodeStream } from 'vue3-qrcode-reader'
   // @ts-ignore
-function onDecode (event) {
+const qrValue: Ref<string> = ref("Qr value")
+function onDecode (event: string) {
   console.log('hi', event)
+  qrValue.value = event;
 }
 
 </script>
 
 <template>
-    <div class="hi">
+    <div class="qr-scanner">
         <qrcode-stream @decode="onDecode($event)"></qrcode-stream>
     </div>
+    {{ qrValue }}
 </template>
   
   <style>
+  @media only screen and (max-width: 760px) {
+    .qr-scanner {
+      margin-top: 120px;
+    }
+  }
   @media only screen and (max-width: 760px) {
     .form-submission.container {
       padding-top: 120px;

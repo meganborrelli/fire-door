@@ -12,23 +12,31 @@ async function getSubmission() {
         console.log(actualData, 'boo')
         return actualData
     })
+    console.log(previousSubmissions)
 }
 
 </script>
 
 <template>
-    <h3>Previous Submissions</h3>
-    <button @click="getSubmission()"> hi </button>
-    <div>
-        <div v-if="previousSubmissions !== null">
-            <div v-for="(x, i) in previousSubmissions" :key="i">
-                {{ x }}
+    <div class="prev-submissions">
+        <h3>Previous Submissions</h3>
+        <button @click="getSubmission()"> hi </button>
+        <div>
+            <div v-if="previousSubmissions !== null">
+                <div v-for="(x, i) in previousSubmissions" :key="i">
+                    {{ x }}
+                </div>
             </div>
         </div>
     </div>
   </template>
   
   <style>
+@media only screen and (max-width: 760px) {
+    .prev-submissions {
+      margin-top: 120px;
+    }
+  }
   @media (min-width: 1024px) {
     .about {
       min-height: 100vh;

@@ -1,1 +1,0 @@
-import{d as o,r as t,a as r,o as s,c as n,b as a}from"./index-BaZRkl1D.js";const i={class:"form-submission container"},d=o({__name:"SubmitReview",setup(m){return t(null),r(()=>{Formio.createForm(document.getElementById("formio"),"https://kcmpmbkzfjbiagr.form.io/firesafetychecker")}),(c,e)=>(s(),n("div",i,e[0]||(e[0]=[a("div",{id:"formio"},null,-1)])))}});export{d as default};

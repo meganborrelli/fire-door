@@ -23,7 +23,7 @@ function onDecode (event: string) {
   <style>
   @media only screen and (max-width: 760px) {
     .qr-scanner {
-      margin-top: 120px;
+      margin-top: 130px;
     }
   }
   @media only screen and (max-width: 760px) {

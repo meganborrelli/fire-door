@@ -7,7 +7,7 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top has-shadow">
     <div class="wrapper">
-      <img src="@/assets/doorsheild.png" width="250" height="50" alt="MyTrainTicket">
+      <img src="@/assets/doorsheild.png" width="350" height="100" alt="MyTrainTicket">
       <nav class="nav-links">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/submit-review">Submit Review</RouterLink>
@@ -37,8 +37,9 @@ nav {
   box-shadow: 0 2px 0 0 var(--vt-c-widget-box-shadow);
   padding-top: 15px;
  /* background-color: grey;*/
-  display: inline-block;
+ /* display: inline-block;*/
   width: 100%;
+  position: absolute;
   /*width: 100%;
   font-size: 12px;
   text-align: center;
@@ -64,6 +65,17 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
+@media only screen and (max-width: 760px) {
+  nav.nav-links {
+    margin-top: 70px;
+    margin-left: -70px;
+    display: flex;
+  }
+  nav.nav-links a {
+    text-align: center;
+  }
+}
+
 
 @media (min-width: 1024px) {
   header {

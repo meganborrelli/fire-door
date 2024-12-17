@@ -13,7 +13,7 @@ import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
-  <div>
+  <div class="homepage">
     Homepage placeholder 
   </div>
   <!---<WelcomeItem>
@@ -96,3 +96,10 @@ import SupportIcon from './icons/IconSupport.vue'
     <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
   </WelcomeItem>-->
 </template>
+<style scoped>
+@media only screen and (max-width: 760px) {
+    .homepage {
+      margin-top: 130px;
+    }
+  }
+</style>

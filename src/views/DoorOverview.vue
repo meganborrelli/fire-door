@@ -35,7 +35,7 @@ async function getSubmission() {
   <style>
 @media only screen and (max-width: 760px) {
     .prev-submissions {
-      margin-top: 120px;
+      margin-top: 130px;
     }
   }
   @media (min-width: 1024px) {

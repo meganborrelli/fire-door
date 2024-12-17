@@ -7,6 +7,10 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+<<<<<<< Updated upstream
+=======
+  base: "/",
+>>>>>>> Stashed changes
   plugins: [
     vue(),
     vueJsx(),

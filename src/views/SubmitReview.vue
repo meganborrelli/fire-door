@@ -6,6 +6,7 @@ import {
 const previousSubmissions: Ref<any> = ref(null);
 
 onMounted(() => {
+  // @ts-ignore
     Formio.createForm(document.getElementById('formio'), 'https://kcmpmbkzfjbiagr.form.io/firesafetychecker');
 });
 

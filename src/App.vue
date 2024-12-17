@@ -4,14 +4,13 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
+  <header class="navbar navbar-expand-md navbar-dark fixed-top has-shadow">
     <div class="wrapper">
-      Hi there
-
+      <img src="@/assets/doorsheild.png" width="250" height="50" alt="MyTrainTicket">
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/submit-review">Submit Review</RouterLink>
+        <RouterLink to="/door-overview">Door Overview</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
@@ -61,6 +60,7 @@ nav a:first-of-type {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
+    width: 100vw;
   }
 
   .logo {
@@ -71,10 +71,11 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   nav {
-    text-align: left;
+    text-align: end;
     margin-left: -1rem;
     font-size: 1rem;
 

@@ -10,7 +10,7 @@ async function getSubmission() {
     .then(response => response.json())
     .then(actualData => {
         console.log(actualData, 'boo')
-        return actualData
+        return actualData.reverse()
     })
     console.log(previousSubmissions)
 }
@@ -20,19 +20,33 @@ async function getSubmission() {
 <template>
     <div class="prev-submissions">
         <h3>Previous Submissions</h3>
-        <button @click="getSubmission()"> hi </button>
+        <v-btn @click="getSubmission()"> View Pre Selected Form </v-btn>
         <div>
             <div v-if="previousSubmissions !== null">
-                <div v-for="(x, i) in previousSubmissions" :key="i" class="pb-3">
-                    Inpection Date: {{ x.created }}<br>
-                    Is firedoor safe: {{ x.data.isFireDoorSafe }}
-                </div>
+                <v-expansion-panels>
+                    <v-expansion-panel v-for="(x, i) in previousSubmissions" 
+                        v-bind:key="i"
+                        class="pb-3" 
+                        value="header">
+                        <v-expansion-panel-title hide-actions>
+                            Report {{ i}}
+                        </v-expansion-panel-title>
+                        <v-expansion-panel-text>
+                            Inpection Date: {{ x.created }}<br>
+                            Is firedoor safe: {{ x.data.isFireDoorSafe }}
+                        </v-expansion-panel-text>
+                    </v-expansion-panel>
+                </v-expansion-panels>
             </div>
         </div>
     </div>
   </template>
   
-  <style>
+<style>
+.prev-submissions {
+    /* display: table-caption; */
+    margin-top: 140px;
+}
 @media only screen and (max-width: 760px) {
     .prev-submissions {
       margin-top: 130px;

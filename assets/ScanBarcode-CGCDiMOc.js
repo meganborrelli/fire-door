@@ -1,0 +1,1 @@
+import{d as s,o as t,c as a,g as c,u as d,V as _}from"./index-B5NKvW9v.js";const i={class:"hi"},p=s({__name:"ScanBarcode",setup(m){function n(e){console.log("hi",e)}return(e,o)=>(t(),a("div",i,[c(d(_.QrcodeStream),{onDecode:o[0]||(o[0]=r=>n(r))})]))}});export{p as default};

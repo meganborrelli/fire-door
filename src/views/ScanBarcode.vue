@@ -5,7 +5,7 @@ import {
   // @ts-ignore
 import { QrcodeStream } from 'vue3-qrcode-reader'
   // @ts-ignore
-const qrValue: Ref<string> = ref("Qr value")
+const qrValue: Ref<string> = ref("Qr value - this will be a unique ID we will have to generate qith a sticker, scan a QR code it works currently")
 function onDecode (event: string) {
   console.log('hi', event)
   qrValue.value = event;

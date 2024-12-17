@@ -23,8 +23,9 @@ async function getSubmission() {
         <button @click="getSubmission()"> hi </button>
         <div>
             <div v-if="previousSubmissions !== null">
-                <div v-for="(x, i) in previousSubmissions" :key="i">
-                    {{ x }}
+                <div v-for="(x, i) in previousSubmissions" :key="i" class="pb-3">
+                    Inpection Date: {{ x.created }}<br>
+                    Is firedoor safe: {{ x.data.isFireDoorSafe }}
                 </div>
             </div>
         </div>

@@ -22,12 +22,17 @@ async function getSubmission() {
 </script>
 
 <template>
-    <div class="form-submission">
+    <div class="form-submission container">
         <div id="formio"></div>
     </div>
-  </template>
+</template>
   
   <style>
+  @media only screen and (max-width: 760px) {
+    .form-submission.container {
+      padding-top: 120px;
+    }
+  }
   @media (min-width: 1024px) {
     .about {
       min-height: 100vh;

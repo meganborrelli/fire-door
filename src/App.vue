@@ -1,20 +1,22 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
-  <header class="navbar navbar-expand-md navbar-dark fixed-top has-shadow">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top has-shadow">
     <div class="wrapper">
       <img src="@/assets/doorsheild.png" width="250" height="50" alt="MyTrainTicket">
-      <nav>
+      <nav class="nav-links">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/submit-review">Submit Review</RouterLink>
         <RouterLink to="/door-overview">Door Overview</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/scan-barcode">Scan QR</RouterLink>
       </nav>
     </div>
-  </header>
+  </nav>
 
   <RouterView />
 </template>
@@ -31,12 +33,20 @@ header {
 }
 
 nav {
+  padding-left: 40px;
+  box-shadow: 0 2px 0 0 var(--vt-c-widget-box-shadow);
+  padding-top: 15px;
+ /* background-color: grey;*/
+  display: inline-block;
   width: 100%;
+  /*width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 2rem;*/
 }
-
+nav img {
+  float:left;
+}
 nav a.router-link-exact-active {
   color: var(--color-text);
 }
